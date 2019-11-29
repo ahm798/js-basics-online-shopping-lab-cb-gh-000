@@ -23,10 +23,10 @@ function viewCart() {
     if(cart.length){
         let str = ``;
         cart.forEach(element => {
-            str += `${element.itemName} at \$${element.itemPrice},`;
+            str += ` ${element.itemName} at \$${element.itemPrice},`;
         });
         str = str.slice(0, -1) + '.';
-        return `In your cart, you have ` + str;
+        return `In your cart, you have` + str;
     }
     else{
         return "Your shopping cart is empty.";
