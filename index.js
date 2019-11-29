@@ -22,8 +22,12 @@ function viewCart() {
     // write your code here
     if(cart.length){
         let str = ``;
-        cart.forEach(element => {
+        cart.forEach((element, index) => {
+          if(index === cart.length - 1){
+            str += ` and ${element.itemName} at \$${element.itemPrice},`;
+          }else{
             str += ` ${element.itemName} at \$${element.itemPrice},`;
+        }
         });
         str = str.slice(0, -1) + '.';
         return `In your cart, you have` + str;
