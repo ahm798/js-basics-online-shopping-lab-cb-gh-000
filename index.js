@@ -51,12 +51,12 @@ function removeFromCart(item) {
     cart.forEach((element, index) => {
         if(item === element.itemName){
             cart.splice(index, 1);
-        }
-        else{
-            return "That item is not in your cart.";
+            return cart;
         }
     });
+    return "That item is not in your cart.";
 }
+
 
 function placeOrder(cardNumber) {
     // write your code here
