@@ -15,7 +15,7 @@ function addToCart(item) {
     i['itemName'] = item;
     i['itemPrice'] = Math.floor(Math.random()* 100);
     cart.push(i);
-    return `${item} has been added to your car.`;
+    return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
@@ -23,7 +23,7 @@ function viewCart() {
     if(cart.length){
         let str = ``;
         cart.forEach((element, index) => {
-          if(index === cart.length - 1){
+          if(index === cart.length - 1 && cart.length > 1){
             str += ` and ${element.itemName} at \$${element.itemPrice},`;
           }else{
             str += ` ${element.itemName} at \$${element.itemPrice},`;
